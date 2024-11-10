@@ -1,0 +1,1 @@
+# DesignPatternsSOLIDPrinciples_Charp
