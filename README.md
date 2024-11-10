@@ -1,1 +1,2 @@
-# DesignPatternsSOLIDPrinciples_Charp
+# Design Patterns and SOLID Principles in C#
+
