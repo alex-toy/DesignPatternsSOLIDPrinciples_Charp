@@ -2,16 +2,25 @@
 
 public class BankAccount
 {
-    private decimal _balance;
+    private decimal _balance = 0;
     public decimal Balance
     {
         get { return _balance; }
-        set { Deposit(value); }
     }
 
-    public void Deposit(decimal amount)
+    public BankAccount(PositiveDecimal initialAmount)
     {
-        if (amount <= 0) throw new ArgumentException("amount should be greater than zero");
-        _balance += amount;
+        Deposit(initialAmount);
+    }
+
+    public void Deposit(PositiveDecimal amount)
+    {
+        _balance += (decimal)amount;
+    }
+
+    public void Withdraw(PositiveDecimal amount)
+    {
+        if (amount > _balance) throw new ArgumentException("insufficient funds");
+        _balance -= (decimal)amount;
     }
 }
