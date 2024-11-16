@@ -1,4 +1,4 @@
-﻿namespace DesignPattern;
+﻿namespace DesignPattern.Encapsulation;
 
 public class BankAccount
 {
