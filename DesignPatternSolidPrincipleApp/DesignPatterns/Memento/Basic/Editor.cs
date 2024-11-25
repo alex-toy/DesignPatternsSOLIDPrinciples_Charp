@@ -1,4 +1,4 @@
-﻿namespace DesignPatterns.Memento;
+﻿namespace DesignPatterns.Memento.Basic;
 
 public class Editor
 {
@@ -7,12 +7,12 @@ public class Editor
 
     public State CreateState()
     {
-        return new State(this);
+        return new State(new Editor() { Content = Content, Title = Title });
     }
 
     public void Restore(State state)
     {
-        Title = state.Editor.Title; 
+        Title = state.Editor.Title;
         Content = state.Editor.Content;
     }
 

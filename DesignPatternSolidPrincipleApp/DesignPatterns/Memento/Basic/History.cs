@@ -1,4 +1,4 @@
-﻿namespace DesignPatterns.Memento;
+﻿namespace DesignPatterns.Memento.Basic;
 
 public class History
 {
@@ -18,8 +18,9 @@ public class History
     public void Undo()
     {
         if (_history.Count == 0) return;
-        State prevState = _history.Last();
         _history.RemoveAt(_history.Count - 1);
+        if (_history.Count == 0) return;
+        State prevState = _history.Last();
         _editor.Restore(prevState);
     }
 

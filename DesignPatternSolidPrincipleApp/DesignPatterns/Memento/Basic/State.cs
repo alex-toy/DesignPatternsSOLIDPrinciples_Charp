@@ -1,4 +1,4 @@
-﻿namespace DesignPatterns.Memento;
+﻿namespace DesignPatterns.Memento.Basic;
 
 public class State
 {
@@ -11,11 +11,6 @@ public class State
     public State(Editor editor)
     {
         _editor = editor;
-        _createdAt = DateTime.UtcNow;
-    }
-
-    public State(string title, string content)
-    {
         _createdAt = DateTime.UtcNow;
     }
 }
