@@ -1,4 +1,7 @@
 ﻿using DesignPatterns.Memento.Basic;
+using DesignPatterns.Memento.Generic;
+using DesignPatterns.State;
+using DesignPatterns.State.Bad;
 
 namespace DesignPatterns;
 
@@ -6,7 +9,16 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Memento();
+        State();
+        //Memento();
+    }
+
+    public static void State()
+    {
+        Book document = new() { State = DesignPatterns.State.State.Moderation, Role = UserRole.Admin };
+        document.Publish();
+        Console.WriteLine(document.State);
+
     }
 
     public static void Memento()
@@ -34,5 +46,10 @@ internal class Program
 
         history.Undo();
         editor.Display();
+
+        MyPerson person = new () { Name = "alex" };
+        History<MyPerson> history2 = new (person);
+        history2.Backup();
+        person.Display();
     }
 }
