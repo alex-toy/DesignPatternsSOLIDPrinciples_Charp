@@ -1,7 +1,13 @@
-﻿using DesignPatterns.Memento.Basic;
+﻿using DesignPatterns.Iterators.Bad;
+using DesignPatterns.Iterators.Good;
+using DesignPatterns.Memento.Basic;
 using DesignPatterns.Memento.Generic;
-using DesignPatterns.State;
-using DesignPatterns.State.Bad;
+using DesignPatterns.StateDP.Bad;
+using DesignPatterns.StateDP.Good;
+using DesignPatterns.StrategyDP.Bad;
+using DesignPatterns.StrategyDP.Good;
+using DesignPatterns.StrategyDP.Good.Compressors;
+using DesignPatterns.StrategyDP.Good.Overlays;
 
 namespace DesignPatterns;
 
@@ -9,16 +15,68 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        State();
+        Command();
+        //Iterator();
+        //Strategy();
+        //State();
         //Memento();
+    }
+
+    public static void Command()
+    {
+
+    }
+
+    public static void Iterator()
+    {
+        BadShoppingList list = new();
+        list.Push("pasta");
+        list.Push("vegetables");
+        list.Push("dishes");
+        list.Display();
+        list.Pop();
+        list.Display();
+
+        ShoppingList list2 = new();
+        list2.Push("fruits");
+        list2.Push("cleaning products");
+        list2.Push("chewing gum");
+        list2.Display();
+        list2.Pop();
+        list2.Display();
+        while (list2.Iterator.HasNext())
+        {
+            Console.WriteLine(list2.Iterator.Current());
+            list2.Iterator.Next();
+        }
+    }
+
+    public static void Strategy()
+    {
+        BadVideoStorage storage = new() { Compressor = BadCompressor.MP4, Overlay = BadOverlay.BlackAndWhite };
+        storage.Store("my_file.txt");
+        storage = new() { Compressor = BadCompressor.MOV, Overlay = BadOverlay.Blur };
+        storage.Store("my_file.txt");
+
+        VideoStorage storage2 = new() { Compressor = new MP4Compressor(), Overlay = new BWOverlay() };
+        storage2.Store("my_file2.txt");
+        storage2 = new() { Compressor = new MOVCompressor(), Overlay = new BlurOverlay() };
+        storage2.Store("my_file2.txt");
     }
 
     public static void State()
     {
-        Book document = new() { State = DesignPatterns.State.State.Moderation, Role = UserRole.Admin };
+        BadBook document = new() { State = BadState.Moderation, Role = BadUserRole.Admin };
         document.Publish();
         Console.WriteLine(document.State);
 
+        Book book = new Book() { Role = UserRole.Admin };
+        book.Publish();
+        Console.WriteLine(book.State);
+        book.Publish();
+        Console.WriteLine(book.State);
+        book.Publish();
+        Console.WriteLine(book.State);
     }
 
     public static void Memento()
