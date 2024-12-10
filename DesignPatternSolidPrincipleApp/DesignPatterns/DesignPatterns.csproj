@@ -8,7 +8,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Commands\Good\" />
+    <Compile Remove="Memento\Generic\**" />
+    <EmbeddedResource Remove="Memento\Generic\**" />
+    <None Remove="Memento\Generic\**" />
   </ItemGroup>
 
 </Project>

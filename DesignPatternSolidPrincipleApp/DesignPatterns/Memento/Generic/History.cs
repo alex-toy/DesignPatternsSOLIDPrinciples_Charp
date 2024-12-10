@@ -1,6 +1,6 @@
 ﻿namespace DesignPatterns.Memento.Generic;
 
-public class History<T> where T : Item, new()
+public class History<T> where T : IHistorable, new()
 {
     private List<State<T>> _history = new List<State<T>>();
     private T _item;

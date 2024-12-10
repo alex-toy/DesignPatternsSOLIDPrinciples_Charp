@@ -10,9 +10,14 @@ public class History
         _editor = editor;
     }
 
+    public State CreateState(Editor editor)
+    {
+        return new State(new Editor() { Content = editor.Content, Title = editor.Title });
+    }
+
     public void Backup()
     {
-        _history.Add(_editor.CreateState());
+        _history.Add(CreateState(_editor));
     }
 
     public void Undo()

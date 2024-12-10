@@ -1,7 +1,8 @@
-﻿using DesignPatterns.Iterators.Bad;
+﻿using DesignPatterns.Command.Good.Commands;
+using DesignPatterns.Commands.Good;
+using DesignPatterns.Iterators.Bad;
 using DesignPatterns.Iterators.Good;
 using DesignPatterns.Memento.Basic;
-using DesignPatterns.Memento.Generic;
 using DesignPatterns.StateDP.Bad;
 using DesignPatterns.StateDP.Good;
 using DesignPatterns.StrategyDP.Bad;
@@ -15,16 +16,32 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Command();
+        //Command();
         //Iterator();
         //Strategy();
         //State();
-        //Memento();
+        Memento();
     }
 
     public static void Command()
     {
+        //BadLight badLight = new BadLight();
+        //BadRemoteControl badRemoteControl = new BadRemoteControl(badLight);
+        //badRemoteControl.PressButton(LightState.On);
+        //badRemoteControl.PressButton(LightState.Dim);
+        //badRemoteControl.PressButton(LightState.Bright);
+        //badRemoteControl.PressButton(LightState.Off);
 
+        Light light = new Light();
+        RemoteControl remoteControl = new RemoteControl();
+        remoteControl.Command = new TurnOn() { Executor = light };
+        remoteControl.PressButton();
+        remoteControl.Command = new Dim() { Executor = light };
+        remoteControl.PressButton();
+        remoteControl.Command = new Bright() { Executor = light };
+        remoteControl.PressButton();
+        remoteControl.Command = new TurnOff() { Executor = light };
+        remoteControl.PressButton();
     }
 
     public static void Iterator()
@@ -105,9 +122,9 @@ internal class Program
         history.Undo();
         editor.Display();
 
-        MyPerson person = new () { Name = "alex" };
-        History<MyPerson> history2 = new (person);
-        history2.Backup();
-        person.Display();
+        //MyEditor myEditor = new () { Title = "title 1", Content = "content 1" };
+        //History<MyEditor> history2 = new (myEditor);
+        //history2.Backup();
+        //myEditor.Display();
     }
 }

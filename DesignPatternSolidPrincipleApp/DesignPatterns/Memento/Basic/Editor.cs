@@ -5,11 +5,6 @@ public class Editor
     public string Title { get; set; }
     public string Content { get; set; }
 
-    public State CreateState()
-    {
-        return new State(new Editor() { Content = Content, Title = Title });
-    }
-
     public void Restore(State state)
     {
         Title = state.Editor.Title;
