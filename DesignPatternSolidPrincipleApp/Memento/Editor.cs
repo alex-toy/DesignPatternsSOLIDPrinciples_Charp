@@ -1,15 +1,9 @@
-﻿namespace DesignPatterns.Memento.Basic;
+﻿namespace Memento;
 
 public class Editor
 {
     public string Title { get; set; }
     public string Content { get; set; }
-
-    //public void Restore(State state)
-    //{
-    //    Title = state.Editor.Title;
-    //    Content = state.Editor.Content;
-    //}
 
     public override string ToString()
     {

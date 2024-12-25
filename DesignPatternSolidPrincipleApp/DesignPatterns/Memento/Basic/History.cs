@@ -15,6 +15,12 @@ public class History
         return new State(new Editor() { Content = editor.Content, Title = editor.Title });
     }
 
+    public void Restore(State state)
+    {
+        _editor.Title = state.Editor.Title;
+        _editor.Content = state.Editor.Content;
+    }
+
     public void Backup()
     {
         _history.Add(CreateState(_editor));
@@ -26,7 +32,7 @@ public class History
         _history.RemoveAt(_history.Count - 1);
         if (_history.Count == 0) return;
         State prevState = _history.Last();
-        _editor.Restore(prevState);
+        Restore(prevState);
     }
 
     public void ShowHistrory()

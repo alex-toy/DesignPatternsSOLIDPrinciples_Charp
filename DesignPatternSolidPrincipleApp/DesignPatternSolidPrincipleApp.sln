@@ -5,7 +5,11 @@ VisualStudioVersion = 17.9.34701.34
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPattern", "DesignPattern\DesignPattern.csproj", "{229292D4-827C-46B1-8B2F-1E33E5FDA135}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesignPatterns", "DesignPatterns\DesignPatterns.csproj", "{62AEA77C-FA79-4B3F-B5C4-987FA9639A45}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns", "DesignPatterns\DesignPatterns.csproj", "{62AEA77C-FA79-4B3F-B5C4-987FA9639A45}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Memento", "Memento\Memento.csproj", "{604BA4E3-DBF2-415E-8AC9-79D4C1ABCC58}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UndoableCommand", "UndoableCommand\UndoableCommand.csproj", "{F3352CE8-7FF1-48DB-A432-2417E89B43A2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{62AEA77C-FA79-4B3F-B5C4-987FA9639A45}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{62AEA77C-FA79-4B3F-B5C4-987FA9639A45}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{62AEA77C-FA79-4B3F-B5C4-987FA9639A45}.Release|Any CPU.Build.0 = Release|Any CPU
+		{604BA4E3-DBF2-415E-8AC9-79D4C1ABCC58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{604BA4E3-DBF2-415E-8AC9-79D4C1ABCC58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{604BA4E3-DBF2-415E-8AC9-79D4C1ABCC58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{604BA4E3-DBF2-415E-8AC9-79D4C1ABCC58}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3352CE8-7FF1-48DB-A432-2417E89B43A2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3352CE8-7FF1-48DB-A432-2417E89B43A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3352CE8-7FF1-48DB-A432-2417E89B43A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3352CE8-7FF1-48DB-A432-2417E89B43A2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
