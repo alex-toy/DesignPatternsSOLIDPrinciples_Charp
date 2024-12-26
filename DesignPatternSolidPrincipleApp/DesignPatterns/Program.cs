@@ -9,6 +9,7 @@ using DesignPatterns.StrategyDP.Bad;
 using DesignPatterns.StrategyDP.Good;
 using DesignPatterns.StrategyDP.Good.Compressors;
 using DesignPatterns.StrategyDP.Good.Overlays;
+using DesignPatterns.Template;
 
 namespace DesignPatterns;
 
@@ -16,11 +17,20 @@ internal class Program
 {
     static void Main(string[] args)
     {
+        Template();
         //Command();
         //Iterator();
         //Strategy();
         //State();
-        Memento();
+        //Memento();
+    }
+
+    public static void Template()
+    {
+        OperationA operationA = new();
+        operationA.Execute();
+        OperationB operationB = new();
+        operationB.Operations();
     }
 
     public static void Command()

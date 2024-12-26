@@ -11,6 +11,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Memento", "Memento\Memento.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UndoableCommand", "UndoableCommand\UndoableCommand.csproj", "{F3352CE8-7FF1-48DB-A432-2417E89B43A2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template", "Template\Template.csproj", "{60E37A16-D15F-4893-B2A2-019791AE35F7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{F3352CE8-7FF1-48DB-A432-2417E89B43A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F3352CE8-7FF1-48DB-A432-2417E89B43A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F3352CE8-7FF1-48DB-A432-2417E89B43A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{60E37A16-D15F-4893-B2A2-019791AE35F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60E37A16-D15F-4893-B2A2-019791AE35F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60E37A16-D15F-4893-B2A2-019791AE35F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60E37A16-D15F-4893-B2A2-019791AE35F7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
