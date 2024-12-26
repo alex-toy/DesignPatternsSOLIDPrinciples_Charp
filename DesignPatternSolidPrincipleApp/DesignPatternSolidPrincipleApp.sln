@@ -9,9 +9,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DesignPatterns", "DesignPat
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Memento", "Memento\Memento.csproj", "{604BA4E3-DBF2-415E-8AC9-79D4C1ABCC58}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UndoableCommand", "UndoableCommand\UndoableCommand.csproj", "{F3352CE8-7FF1-48DB-A432-2417E89B43A2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "UndoableCommand", "UndoableCommand\UndoableCommand.csproj", "{F3352CE8-7FF1-48DB-A432-2417E89B43A2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template", "Template\Template.csproj", "{60E37A16-D15F-4893-B2A2-019791AE35F7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template", "Template\Template.csproj", "{60E37A16-D15F-4893-B2A2-019791AE35F7}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ObserverDP", "ObserverDP\ObserverDP.csproj", "{BBB1873E-002B-4C06-A265-45BE7E4CC771}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{60E37A16-D15F-4893-B2A2-019791AE35F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{60E37A16-D15F-4893-B2A2-019791AE35F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{60E37A16-D15F-4893-B2A2-019791AE35F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBB1873E-002B-4C06-A265-45BE7E4CC771}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBB1873E-002B-4C06-A265-45BE7E4CC771}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBB1873E-002B-4C06-A265-45BE7E4CC771}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBB1873E-002B-4C06-A265-45BE7E4CC771}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
