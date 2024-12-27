@@ -2,6 +2,7 @@
 using DesignPatterns.Commands.Good;
 using DesignPatterns.Iterators.Bad;
 using DesignPatterns.Iterators.Good;
+using DesignPatterns.Mediator;
 using DesignPatterns.Memento.Basic;
 using DesignPatterns.StateDP.Bad;
 using DesignPatterns.StateDP.Good;
@@ -17,12 +18,19 @@ internal class Program
 {
     static void Main(string[] args)
     {
-        Template();
+        Mediator();
+        //Template();
         //Command();
         //Iterator();
         //Strategy();
         //State();
         //Memento();
+    }
+
+    public static void Mediator()
+    {
+        PostsDialogBox postsDialogBox = new PostsDialogBox();
+        postsDialogBox.SimulateUserInteraction();
     }
 
     public static void Template()
